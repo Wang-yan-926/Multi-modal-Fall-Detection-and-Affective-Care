@@ -1,0 +1,3 @@
+# Ollama 本地模型配置
+http://localhost:11434
+qwen2.5:3b
