@@ -1,23 +1,40 @@
-# ==================== Computer Vision & Pose Estimation ====================
-# YOLOv8 (Ultralytics) - 实时人体目标检测
-ultralytics==8.2.81
-# MediaPipe Pose - 关键点姿态估计
-mediapipe==0.10.14
-# OpenCV - 视频采集、绘制与视频编码
-opencv-python==4.10.0.84
-# Pillow - 中文字体绘制 (cv2_add_chinese_text)
-Pillow==10.4.0
+# AI-Vision-Guardian — Python 依赖
+# 兼容 Python 3.8 ~ 3.11（PyQt6 与 mediapipe 截止 2026-07 的稳定支持范围）
 
-# ==================== Desktop GUI (PyQt6) ====================
-# PyQt6 - 桌面图形界面
-PyQt6==6.7.1
-# Pygame - 告警音频播放 (alarm.mp3)
-pygame==2.5.2
+# ---------------- GUI ----------------
+PyQt6>=6.6,<6.9
 
-# ==================== Data Persistence ====================
-# PyMySQL - MySQL 告警记录与用户登录鉴权
-PyMySQL==1.1.1
+# ---------------- 视觉 & 机器学习 ----------------
+# OpenCV (headless 版体积更小；需要 GUI 显示才装 pyqt6-backend opencv-python)
+opencv-python>=4.8.0
+numpy>=1.24.0
+Pillow>=10.0.0
+torch>=2.1.0
+ultralytics>=8.2.0
+mediapipe>=0.10.7
 
-# ==================== Numerical Computing ====================
-# NumPy - 数组与角度计算
-numpy==1.26.4
+# ---------------- 音频 / TTS / 语音 ----------------
+# 离线 TTS（中文 SAPI5 走 Windows 自带）
+pyttsx3>=2.90
+# 告警音播放
+pygame>=2.5.0
+# 音频采集
+PyAudio>=0.2.14
+# 麦克风录音 / 在线识别
+SpeechRecognition>=3.10.0
+# 离线中文识别
+vosk>=0.3.45
+
+# ---------------- 数据库 ----------------
+PyMySQL>=1.1.0
+
+# ---------------- 工具 ----------------
+requests>=2.31.0
+
+# ---------------- 可选：加速 LLM 推理（按需启用） ----------------
+# transformers>=4.40.0         # 本地 LLM（Qwen2 / ChatGLM3）
+# accelerate>=0.27.0
+
+# ---------------- 测试 ----------------
+pytest>=7.4.0
+pytest-qt>=4.4.0

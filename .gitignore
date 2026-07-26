@@ -1,0 +1,59 @@
+# ============== Python ==============
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ============== 虚拟环境 ==============
+.venv/
+venv/
+env/
+
+# ============== PyCharm / VSCode ==============
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# ============== 模型权重 / 数据集（大文件，禁止入库） ==============
+# YOLO & 训练产物
+*.pt
+*.pth
+*.onnx
+*.weights
+*.engine
+*.pkl
+
+# Vosk 模型（按 README 自行放置）
+model/vosk-model-*/
+
+# ============== 资源文件 ==============
+msyh.ttc
+simhei.ttf
+alarm.mp3
+
+# ============== 视频输入 / 输出 ==============
+video/*.mp4
+video/*.avi
+video/*.mov
+result/*.mp4
+result/*.avi
+
+# ============== 测试 / 临时文件 ==============
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+*.tmp
+
+# ============== 隐私 & 凭据 ==============
+.env
+config_kimi.txt
+*.key
+*.pem
