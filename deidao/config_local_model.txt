@@ -1,3 +1,4 @@
 # Ollama 本地模型配置
-http://localhost:11434
+
 qwen2.5:3b
+ollama自己本地部署就可以，模型可根据显卡自行选择
