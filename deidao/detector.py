@@ -63,7 +63,7 @@ class DetectionThread(QThread):
         super().__init__()
         self.source = source
         self._device = "cpu"
-        default_webhook = "https://open.feishu.cn/open-apis/bot/v2/hook/e1d06cee-2c38-4679-962a-9fccb85fd766"
+        default_webhook = "绑定你自己的,我的飞书要炸了"
         self.settings = settings if settings else {"fall_threshold": 50, "sound_enabled": True, "buffer_seconds": 10, "feishu_webhook": default_webhook}
         self.settings["feishu_webhook"] = default_webhook
 
